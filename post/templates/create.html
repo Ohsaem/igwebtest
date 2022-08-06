@@ -1,0 +1,21 @@
+<div class="container">
+    <form action="{% url 'postcreate' %}" method = POST enctype="multipart/form-data">
+    <h4>제목: </h4>
+    <input type="text" name="title">
+    <br>
+    <br>
+    <h4>본문: </h4>
+    <textarea cols=40 rows=10 name="body"></textarea>
+    <br>
+    <br>
+    <input type="file" name="file">
+    <br>
+    <br>
+    <p>태그</p>
+    <input type="tag" name="tagging">
+    <br>
+    <br>
+    {% csrf_token %}
+    <input class="btn btn-dark" type="submit" value="글쓰기">
+</form>
+</div>
